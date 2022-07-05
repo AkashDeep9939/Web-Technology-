@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Restricted</title>
+</head>
+<body id="body">
+    <label>Enter Name </label>
+    <input id="name" type="text" placeholder="Name"/>
+    <br>
+    <label>Enter Age </label>
+    <input id="age" type="number" placeholder="Age"/>
+    <br>
+    <button onclick="Check()">Submit</button>
+</body>
+<script>
+    age = document.getElementById('age');
+    nam = document.getElementById('name');
+    body = document.getElementById('body');
+    function Check(){
+        nm = nam.value;
+        a = parseInt(age.value);
+        if(a<18) body.innerHTML = `<h3>Hello ${nm}!You are not authorized to visit the site</h3>`;
+        else body.innerHTML = `<h3>Hello ${nm}, Welcome to this site</h3>`;
+    }
+</script>
+</html>
